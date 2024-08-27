@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
-import GetStartedImage from "@public/assets/get-started-image.svg";
-import Button from "@/app/components/button/button";
+import GetStartedImage from '@public/assets/get-started-image.svg';
+import Button from '@/app/components/button/button';
 
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const router = useRouter();
 
   const handleNavigation = () => {
     // test push
-    router.push("/welcome");
+    router.push('/welcome');
   };
 
   return (
@@ -25,9 +25,7 @@ export default function Home() {
           <Image
             src={GetStartedImage}
             alt="get-started-image"
-            width={333}
-            height={381}
-            className="my-5"
+            className="my-5 h-auto w-full"
           />
         </div>
 

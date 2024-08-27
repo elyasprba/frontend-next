@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
-import WelcomeImage from "@public/assets/welcome-image.svg";
-import Button from "@/app/components/button/button";
+import WelcomeImage from '@public/assets/welcome-image.svg';
+import Button from '@/app/components/button/button';
 
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 
 export default function Welcome() {
   const router = useRouter();
 
   const handleRegister = () => {
-    router.push("/register");
+    router.push('/register');
   };
 
   const handleLogin = () => {
-    router.push("/login");
+    router.push('/login');
   };
 
   return (
@@ -23,7 +23,7 @@ export default function Welcome() {
       <div className="mx-5">
         <div className="mt-6 text-center">
           <h1 className="mb-4 text-6xl font-bold">Welcome!</h1>
-          <p className="text-md mx-10 font-light">
+          <p className="mx-14 text-sm text-slate-700">
             Get a cup of coffee for free only for new user
           </p>
         </div>
@@ -31,9 +31,7 @@ export default function Welcome() {
           <Image
             src={WelcomeImage}
             alt="welcome-image"
-            width={308}
-            height={201}
-            className="my-9 items-center"
+            className="my-9 h-auto w-full items-center"
           />
         </div>
         <div className="flex flex-col gap-4">
