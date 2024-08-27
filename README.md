@@ -55,7 +55,7 @@ Here are some related projects
 
 <div style="display:flex, flex-direction: column" >
 <img src="public/readme/get-started.png" style="width: 200px">
-<img src="public/readme//register.png" style="width: 200px; margin-left: 20px; margin-right: 20px">
 <img src="public/readme/welcome.png" style="width: 200px">
+<img src="public/readme/register.png" style="width: 200px">
 
 </div>
