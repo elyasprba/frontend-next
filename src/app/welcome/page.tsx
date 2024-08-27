@@ -1,22 +1,22 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
+import Image from 'next/image'
 
-import WelcomeImage from '@public/assets/welcome-image.svg';
-import Button from '@/app/components/button/button';
+import WelcomeImage from '@public/assets/welcome-image.svg'
+import Button from '@/app/components/button/button'
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation'
 
 export default function Welcome() {
-  const router = useRouter();
+  const router = useRouter()
 
   const handleRegister = () => {
-    router.push('/register');
-  };
+    router.push('/register')
+  }
 
   const handleLogin = () => {
-    router.push('/login');
-  };
+    router.push('/login')
+  }
 
   return (
     <main className="flex min-h-screen items-center justify-center">
@@ -44,5 +44,5 @@ export default function Welcome() {
         </div>
       </div>
     </main>
-  );
+  )
 }

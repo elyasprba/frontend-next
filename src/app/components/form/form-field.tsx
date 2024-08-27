@@ -1,9 +1,9 @@
 interface FormFieldProps {
-  id: string;
-  register: any;
-  error: any;
-  placeholder: string;
-  type: string;
+  id: string
+  register: any
+  error: any
+  placeholder: string
+  type: string
 }
 
 export const FormField = ({
@@ -29,4 +29,4 @@ export const FormField = ({
       </p>
     )}
   </div>
-);
+)

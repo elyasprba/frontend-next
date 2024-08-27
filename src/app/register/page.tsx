@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm, type FieldValues } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm, type FieldValues } from 'react-hook-form'
 
-import Image from 'next/image';
+import Image from 'next/image'
 
-import RegisterImage from '@public/assets/register-image.svg';
-import Button from '@/app/components/button/button';
-import { registerSchema } from '../lib/shemas/register-shema';
-import { FormField } from '@/app/components/form/form-field';
-import { usePostRegister } from '../hooks/use-post-register';
-import { RegisterPayload } from '../types/auth-types';
+import RegisterImage from '@public/assets/register-image.svg'
+import Button from '@/app/components/button/button'
+import { registerSchema } from '../lib/shemas/register-shema'
+import { FormField } from '@/app/components/form/form-field'
+import { usePostRegister } from '../hooks/use-post-register'
+import { RegisterPayload } from '../types/auth-types'
 
 function Register() {
   const {
@@ -19,13 +19,13 @@ function Register() {
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(registerSchema),
-  });
+  })
 
-  const { mutate } = usePostRegister();
+  const { mutate } = usePostRegister()
 
   const onSubmit = async (data: FieldValues) => {
-    mutate(data as RegisterPayload);
-  };
+    mutate(data as RegisterPayload)
+  }
 
   return (
     <>
@@ -81,7 +81,7 @@ function Register() {
         </form>
       </section>
     </>
-  );
+  )
 }
 
-export default Register;
+export default Register
