@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
 interface ButtonProps {
-  title: string;
-  isBrown: boolean;
-  disabled?: boolean;
-  onClick?: () => void;
+  title: string
+  isBrown: boolean
+  disabled?: boolean
+  onClick?: () => void
 }
 
 export default function Button({
@@ -22,7 +22,7 @@ export default function Button({
       >
         {title}
       </button>
-    );
+    )
   }
 
   return (
@@ -33,5 +33,5 @@ export default function Button({
     >
       {title}
     </button>
-  );
+  )
 }

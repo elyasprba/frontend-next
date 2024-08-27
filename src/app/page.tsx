@@ -1,19 +1,19 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
+import Image from 'next/image'
 
-import GetStartedImage from '@public/assets/get-started-image.svg';
-import Button from '@/app/components/button/button';
+import GetStartedImage from '@public/assets/get-started-image.svg'
+import Button from '@/app/components/button/button'
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
-  const router = useRouter();
+  const router = useRouter()
 
   const handleNavigation = () => {
     // test push
-    router.push('/welcome');
-  };
+    router.push('/welcome')
+  }
 
   return (
     <main className="flex min-h-screen items-center justify-center">
@@ -34,5 +34,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }
