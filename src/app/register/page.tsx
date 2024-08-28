@@ -29,7 +29,7 @@ function Register() {
 
   return (
     <>
-      <section className="flex min-h-screen flex-col items-center justify-center">
+      <section className="flex min-h-screen flex-col items-center justify-center pt-12">
         <div className="relative">
           <Image
             src={RegisterImage}
@@ -45,7 +45,7 @@ function Register() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="mx-auto mt-8 w-full max-w-md space-y-4 px-5"
+          className="mx-auto my-10 w-full max-w-md space-y-4 px-5"
         >
           <FormField
             id="email"
@@ -71,7 +71,7 @@ function Register() {
             type="text"
           />
 
-          <div className="pt-6">
+          <div className="pt-8">
             <Button
               title="Create Account"
               isBrown={false}
