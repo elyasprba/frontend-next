@@ -7,6 +7,7 @@ export const registerSchema = z.object({
     .min(10, { message: 'Password must be at least 10 characters long' }),
   phone_number: z
     .string()
+    .regex(/^\d+$/, { message: 'Phone number must be a valid number' })
     .min(10, { message: 'Phone number must be at least 10 characters long' })
     .max(13, {
       message: 'Phone number must be no more than 13 characters long',
