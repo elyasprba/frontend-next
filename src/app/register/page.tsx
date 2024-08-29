@@ -33,7 +33,7 @@ function Page() {
   if (isSuccess) {
     setTimeout(() => {
       router.push('/login')
-    }, 2000)
+    }, 1500)
   }
 
   return (

@@ -34,8 +34,8 @@ function Page() {
 
   if (isSuccess) {
     setTimeout(() => {
-      router.push('/dashboard')
-    }, 2000)
+      router.replace('/dashboard')
+    }, 1500)
   }
 
   return (
