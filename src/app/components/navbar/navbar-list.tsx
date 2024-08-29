@@ -1,5 +1,4 @@
 import {
-  CartIcon,
   CartListIcon,
   MenuIcon,
   NextIcon,
