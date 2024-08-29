@@ -1,5 +1,4 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextResponse, NextRequest } from 'next/server'
 import { LS_KEYS } from './app/utils/cookies'
 
 export function middleware(request: NextRequest) {

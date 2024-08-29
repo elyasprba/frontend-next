@@ -3,8 +3,7 @@ import { useMutation } from '@tanstack/react-query'
 import { loginApi } from '../../api/auth/auth-api'
 import { LoginPayload } from '../../types/auth-types'
 import { toastError, toastSuccess } from '@/app/utils/toast'
-import { LS_KEYS } from '@/app/utils/cookies'
-import { cookies } from '@/app/utils/cookies'
+import { LS_KEYS, cookies } from '@/app/utils/cookies'
 
 export const usePostLogin = () => {
   return useMutation({
