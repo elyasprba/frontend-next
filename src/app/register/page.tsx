@@ -32,7 +32,7 @@ function Page() {
 
   if (isSuccess) {
     setTimeout(() => {
-      router.push('/login')
+      router.replace('/login')
     }, 1500)
   }
 
