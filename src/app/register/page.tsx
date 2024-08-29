@@ -9,10 +9,12 @@ import RegisterImage from '@public/assets/register-image.svg'
 import Button from '@/app/components/button/button'
 import { registerSchema } from '../lib/shemas/register-shema'
 import { FormField } from '@/app/components/form/form-field'
-import { usePostRegister } from '../hooks/use-post-register'
+import { usePostRegister } from '../hooks/auth/use-post-register'
 import { RegisterPayload } from '../types/auth-types'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
-function Register() {
+function Page() {
   const {
     register,
     handleSubmit,
@@ -21,31 +23,38 @@ function Register() {
     resolver: zodResolver(registerSchema),
   })
 
-  const { mutate } = usePostRegister()
+  const { mutate, isSuccess, isPending } = usePostRegister()
+  const router = useRouter()
 
   const onSubmit = async (data: FieldValues) => {
     mutate(data as RegisterPayload)
   }
 
+  if (isSuccess) {
+    setTimeout(() => {
+      router.push('/login')
+    }, 1500)
+  }
+
   return (
     <>
-      <section className="flex min-h-screen flex-col items-center justify-center pt-12">
-        <div className="relative">
+      <main className="flex min-h-screen flex-col items-center justify-center px-5">
+        <section className="relative">
           <Image
             src={RegisterImage}
             alt="register-image"
             className="h-auto w-full"
           />
-          <div className="absolute right-0 top-3 text-left">
+          <section className="absolute right-0 top-3 text-left">
             <h1 className="text-6xl font-bold">
               Sign <br /> Up
             </h1>
-          </div>
-        </div>
+          </section>
+        </section>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="mx-auto my-10 w-full max-w-md space-y-4 px-5"
+          className="mx-auto mt-12 w-full max-w-md space-y-4"
         >
           <FormField
             id="email"
@@ -71,17 +80,28 @@ function Register() {
             type="text"
           />
 
-          <div className="pt-8">
+          <section className="pt-5">
             <Button
               title="Create Account"
-              isBrown={false}
-              disabled={isSubmitting}
+              isBrown
+              disabled={isSubmitting && isPending}
             />
-          </div>
+            <section className="flex justify-center gap-1 pt-3">
+              <div className="text-center text-sm text-slate-500">
+                Already have an account?
+              </div>
+              <Link
+                href="/login"
+                className="cursor-pointer text-center text-sm text-blue-500"
+              >
+                Login
+              </Link>
+            </section>
+          </section>
         </form>
-      </section>
+      </main>
     </>
   )
 }
 
-export default Register
+export default Page

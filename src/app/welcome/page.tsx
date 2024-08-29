@@ -7,7 +7,7 @@ import Button from '@/app/components/button/button'
 
 import { useRouter } from 'next/navigation'
 
-export default function Welcome() {
+function Page() {
   const router = useRouter()
 
   const handleRegister = () => {
@@ -46,3 +46,5 @@ export default function Welcome() {
     </main>
   )
 }
+
+export default Page

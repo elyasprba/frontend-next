@@ -12,7 +12,7 @@ export default function Home() {
 
   const handleNavigation = () => {
     // test push
-    router.push('/welcome')
+    router.replace('/welcome')
   }
 
   return (

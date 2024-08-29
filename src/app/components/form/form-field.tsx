@@ -20,6 +20,7 @@ export const FormField = ({
         id={id}
         className="form-input-auth"
         type={type}
+        autoComplete="off"
         placeholder={placeholder}
       />
     </div>
