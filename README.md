@@ -53,9 +53,10 @@ Here are some related projects
 
 ## Screenshots
 
-<div style="display:flex, flex-direction: column" >
+<div style="display:flex; gap: 10px" >
 <img src="public/readme/get-started.png" style="width: 200px">
 <img src="public/readme/welcome.png" style="width: 200px">
 <img src="public/readme/register.png" style="width: 200px">
+<img src="public/readme/login.png" style="width: 200px">
 
 </div>
