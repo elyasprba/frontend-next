@@ -4,7 +4,7 @@ export const registerSchema = z.object({
   email: z.string().email('Email is not valid'),
   password: z
     .string()
-    .min(10, { message: 'Password must be at least 10 characters long' }),
+    .min(8, { message: 'Password must be at least 8 characters long' }),
   phone_number: z
     .string()
     .regex(/^\d+$/, { message: 'Phone number must be a valid number' })

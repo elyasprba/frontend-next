@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import 'react-toastify/dist/ReactToastify.css'
 
-import ReactQueryProvider from './utils/providers/react-query'
+import ReactQueryProvider from './hooks/providers/react-query'
+import { ToastContainer } from 'react-toastify'
 
 const inter = Poppins({
   subsets: ['latin', 'latin-ext'],
@@ -20,10 +22,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <ReactQueryProvider>
-        <body className={inter.className}>{children}</body>
-      </ReactQueryProvider>
-    </html>
+    <>
+      <html lang="en">
+        <ReactQueryProvider>
+          <body className={inter.className}>
+            {children}
+            <ToastContainer />
+          </body>
+        </ReactQueryProvider>
+      </html>
+    </>
   )
 }
