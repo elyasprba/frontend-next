@@ -19,7 +19,7 @@ const menuItems = [
   { icon: SecurityIcon, text: 'Security', link: '/profile' },
 ]
 
-export const HamburgerMenu = () => {
+export const HamburgerMenu: React.FC = () => {
   return (
     <main>
       <section className="flex flex-col items-center justify-center gap-3 rounded-e-3xl bg-brown py-7">
@@ -36,21 +36,21 @@ export const HamburgerMenu = () => {
         </div>
       </section>
 
-      <div className="flex h-auto w-full flex-col">
-        <div className="flex flex-grow flex-col gap-5 px-8 py-[20%]">
-          {menuItems.map((item, index) => (
-            <section key={item.text}>
-              {item.link && (
-                <Link href={item.link} className="w-full cursor-pointer">
-                  <MenuItemContent icon={item.icon} text={item.text} />
-                </Link>
-              )}
-              {index < menuItems.length - 1 && <Divider />}
-            </section>
-          ))}
-        </div>
-        <div className="mt-auto px-10 py-5">
-          <div className="flex items-center gap-1">
+      <div className="flex flex-col px-8 pt-12">
+        <div className="flex flex-col gap-5">
+          <div>
+            {menuItems.map((item, index) => (
+              <section key={item.text}>
+                {item.link && (
+                  <Link href={item.link} className="w-full cursor-pointer">
+                    <MenuItemContent icon={item.icon} text={item.text} />
+                  </Link>
+                )}
+                {index < menuItems.length - 1 && <Divider />}
+              </section>
+            ))}
+          </div>
+          <div className="flex items-center gap-1 pb-5 pt-10">
             <p className="text-lg font-medium text-brown">Sign-out</p>
             <NextIcon width={40} height={25} />
           </div>
@@ -64,7 +64,7 @@ const MenuItemContent: React.FC<{ icon: React.ElementType; text: string }> = ({
   icon: Icon,
   text,
 }) => (
-  <div className="flex w-full items-center gap-3 pb-2">
+  <div className="flex w-full items-center gap-3 py-4">
     <Icon width={23} height={23} />
     <p className="text-lg font-medium text-brown">{text}</p>
   </div>
