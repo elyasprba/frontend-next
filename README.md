@@ -50,6 +50,7 @@ Here are some related projects
 - Welcome
 - Register
 - Login
+- Profile
 
 ## Screenshots
 
@@ -58,6 +59,7 @@ Here are some related projects
 <img src="public/readme/welcome.png" style="width: 200px">
 <img src="public/readme/register.png" style="width: 200px">
 <img src="public/readme/login.png" style="width: 200px">
-<img src="public/readme/hamburger-menu-preview.png" style="width: 200px">
+<img src="public/readme/hamburger-menu.png" style="width: 200px">
+<img src="public/readme/profile.png" style="width: 200px">
 
 </div>
