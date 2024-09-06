@@ -3,7 +3,7 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 
-import ReactQueryProvider from './hooks/providers/react-query'
+import ReactQueryProvider from '../hooks/providers/react-query'
 import { ToastContainer } from 'react-toastify'
 
 const inter = Poppins({
