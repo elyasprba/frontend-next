@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { useMutation } from '@tanstack/react-query'
-import { loginApi } from '../../app/api/auth/auth-api'
-import { LoginPayload } from '../../types/auth-types'
 import { toastError, toastSuccess } from '@/utils/toast'
-import { LS_KEYS, cookies } from '@/app/utils/cookies'
+import { loginApi } from '@/api/auth/auth-api'
+import { cookies, LS_KEYS } from '@/utils/cookies'
+import { LoginPayload } from '@/types/auth-types'
 
 export const usePostLogin = () => {
   return useMutation({
