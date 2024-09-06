@@ -41,7 +41,12 @@ function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
       <section className="flex items-center justify-center">
-        <Image src={LoginImage} alt="login-image" className="h-auto w-full" />
+        <Image
+          src={LoginImage}
+          alt="login-image"
+          className="h-auto w-full"
+          data-testid="login-image"
+        />
         <section className="">
           <h1 className="text-6xl font-bold">
             Log <br /> in
@@ -91,7 +96,11 @@ function Page() {
 
           <button className="w-full rounded-2xl border-2 bg-white p-4">
             <section className="flex items-center justify-center gap-3">
-              <Image src={GoogleImage} alt="google-image" />
+              <Image
+                src={GoogleImage}
+                alt="google-image"
+                data-testid="google-image"
+              />
               <div className="font-light">Login With Google</div>
             </section>
           </button>
