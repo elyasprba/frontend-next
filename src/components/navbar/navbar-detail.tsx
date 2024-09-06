@@ -1,4 +1,4 @@
-import { BackIcon, CartIcon, CartListIcon } from '@public/assets/icon'
+import { BackIcon } from '@public/assets/icon'
 import Link from 'next/link'
 import React from 'react'
 

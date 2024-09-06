@@ -1,9 +1,9 @@
-import { NavbarDetail } from '../components/navbar/navbar-detail'
+import { NavbarDetail } from '../../components/navbar/navbar-detail'
 import Image from 'next/image'
 import UserImage from '@public/user-image.svg'
 import { CartIcon, NextIcon } from '@public/assets/icon'
 import CoffeeImage from '@public/coffee.svg'
-import Button from '../components/button/button'
+import Button from '../../components/button/button'
 
 function Page() {
   return (

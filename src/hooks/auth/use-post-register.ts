@@ -1,8 +1,8 @@
 import { useMutation } from '@tanstack/react-query'
-import { registerApi } from '../../api/auth/auth-api'
+import { registerApi } from '../../app/api/auth/auth-api'
 import { RegisterPayload } from '../../types/auth-types'
 import axios from 'axios'
-import { toastError, toastSuccess } from '@/app/utils/toast'
+import { toastError, toastSuccess } from '@/utils/toast'
 
 export const usePostRegister = () => {
   return useMutation({

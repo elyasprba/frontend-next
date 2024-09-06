@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from 'next/server'
-import { LS_KEYS } from './app/utils/cookies'
+import { LS_KEYS } from './utils/cookies'
 
 export function middleware(request: NextRequest) {
   const getToken = request.cookies.get(LS_KEYS.auth)?.value || null
