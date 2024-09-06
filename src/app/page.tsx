@@ -25,12 +25,17 @@ export default function Home() {
           <Image
             src={GetStartedImage}
             alt="get-started-image"
+            data-testid="get-started-image"
             className="my-5 h-auto w-full"
           />
         </div>
 
-        <div className="flex flex-col" onClick={handleNavigation}>
-          <Button title="Get Started" isBrown={true} />
+        <div className="flex flex-col">
+          <Button
+            title="Get Started"
+            isBrown={true}
+            onClick={handleNavigation}
+          />
         </div>
       </div>
     </main>
